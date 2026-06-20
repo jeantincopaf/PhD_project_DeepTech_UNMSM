@@ -16,18 +16,48 @@ What does the literature show about computer vision-based systems for pill class
 
 ```text
 ("pill detection"[Title/Abstract] OR "medication detection"[Title/Abstract] OR "drug detection"[Title/Abstract] OR "tablet detection"[Title/Abstract] OR "pill classification"[Title/Abstract] OR "medication classification"[Title/Abstract] OR "drug identification"[Title/Abstract] OR "pharmaceutical identification"[Title/Abstract] OR "pill recognition"[Title/Abstract] OR "medication recognition"[Title/Abstract] OR "drug recognition"[Title/Abstract] OR "tablet recognition"[Title/Abstract] OR "pill image"[Title/Abstract] OR "medication image"[Title/Abstract] OR "drug image"[Title/Abstract])
-
 AND
-
 ("swallowing detection"[Title/Abstract] OR "ingestion detection"[Title/Abstract] OR "pill intake"[Title/Abstract] OR "medication intake"[Title/Abstract] OR "drug intake"[Title/Abstract] OR "medication adherence"[Title/Abstract] OR "drug adherence"[Title/Abstract] OR "pill adherence"[Title/Abstract] OR "medication compliance"[Title/Abstract] OR "drug compliance"[Title/Abstract] OR "swallowing verification"[Title/Abstract] OR "ingestion verification"[Title/Abstract] OR "medication consumption"[Title/Abstract] OR "drug consumption"[Title/Abstract] OR "pill consumption"[Title/Abstract])
-
 AND
-
 ("computer vision"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "convolutional neural network"[Title/Abstract] OR "CNN"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR "image classification"[Title/Abstract] OR "object detection"[Title/Abstract] OR "image recognition"[Title/Abstract] OR "video analysis"[Title/Abstract] OR "action recognition"[Title/Abstract] OR "activity recognition"[Title/Abstract])
-
 AND
-
 ("tuberculosis"[Title/Abstract] OR "DOTS"[Title/Abstract] OR "directly observed therapy"[Title/Abstract] OR "medication adherence"[Title/Abstract] OR "treatment monitoring"[Title/Abstract] OR "chronic disease"[Title/Abstract] OR "telemedicine"[Title/Abstract] OR "mobile health"[Title/Abstract] OR "mHealth"[Title/Abstract] OR "telehealth"[Title/Abstract] OR "remote monitoring"[Title/Abstract] OR "digital health"[Title/Abstract] OR "eHealth"[Title/Abstract] OR "healthcare technology"[Title/Abstract] OR "medical imaging"[Title/Abstract])
+```
+
+**Boolean search string (Web of Science)**
+
+```text
+TS=("pill detection" OR "medication detection" OR "drug detection" OR "tablet detection" OR "pill classification" OR "medication classification" OR "drug identification" OR "pharmaceutical identification" OR "pill recognition" OR "medication recognition" OR "drug recognition" OR "tablet recognition" OR "pill image" OR "medication image" OR "drug image" OR "pharmaceutical image" OR "pill counting" OR "medication counting" OR "drug counting" OR "pharmaceutical counting")
+AND
+TS=("swallowing detection" OR "ingestion detection" OR "pill intake" OR "medication intake" OR "drug intake" OR "medication adherence" OR "drug adherence" OR "pill adherence" OR "medication compliance" OR "drug compliance" OR "treatment adherence" OR "treatment compliance" OR "swallowing verification" OR "ingestion verification" OR "medication consumption" OR "drug consumption" OR "pill consumption" OR "medication taking" OR "drug taking" OR "pill taking" OR "medication swallowing" OR "drug swallowing")
+AND
+TS=("computer vision" OR "deep learning" OR "convolutional neural network" OR "CNN" OR "machine learning" OR "artificial intelligence" OR "neural network" OR "image classification" OR "object detection" OR "image recognition" OR "video analysis" OR "action recognition" OR "activity recognition" OR "pattern recognition" OR "image processing" OR "video processing" OR "feature extraction" OR "transfer learning")
+AND
+TS=("tuberculosis" OR "DOTS" OR "directly observed therapy" OR "medication adherence" OR "treatment monitoring" OR "chronic disease" OR "telemedicine" OR "mobile health" OR "mHealth" OR "telehealth" OR "remote monitoring" OR "digital health" OR "eHealth" OR "healthcare technology" OR "medical imaging" OR "smartphone" OR "mobile application" OR "wearable" OR "health informatics")
+```
+
+**Boolean search string (Scopus)**
+
+```text
+TITLE-ABS-KEY(("pill detection" OR "medication detection" OR "drug detection" OR "tablet detection" OR "pill classification" OR "medication classification" OR "drug identification" OR "pharmaceutical identification" OR "pill recognition" OR "medication recognition" OR "drug recognition" OR "tablet recognition" OR "pill image" OR "medication image" OR "drug image" OR "pharmaceutical image" OR "pill counting" OR "medication counting" OR "drug counting"))
+AND
+TITLE-ABS-KEY(("swallowing detection" OR "ingestion detection" OR "pill intake" OR "medication intake" OR "drug intake" OR "medication adherence" OR "drug adherence" OR "pill adherence" OR "medication compliance" OR "drug compliance" OR "treatment adherence" OR "treatment compliance" OR "swallowing verification" OR "ingestion verification" OR "medication consumption" OR "drug consumption" OR "pill consumption" OR "medication taking" OR "drug taking" OR "pill taking"))
+AND
+TITLE-ABS-KEY(("computer vision" OR "deep learning" OR "convolutional neural network" OR "CNN" OR "machine learning" OR "artificial intelligence" OR "neural network" OR "image classification" OR "object detection" OR "image recognition" OR "video analysis" OR "action recognition" OR "activity recognition" OR "pattern recognition" OR "image processing" OR "video processing" OR "feature extraction"))
+AND
+TITLE-ABS-KEY(("tuberculosis" OR "DOTS" OR "directly observed therapy" OR "medication adherence" OR "treatment monitoring" OR "chronic disease" OR "telemedicine" OR "mobile health" OR "mHealth" OR "telehealth" OR "remote monitoring" OR "digital health" OR "eHealth" OR "healthcare technology" OR "medical imaging" OR "smartphone" OR "mobile application" OR "wearable"))
+```
+
+**Boolean search string (IEEEXplore)**
+
+```text
+(("pill detection" OR "medication detection" OR "drug detection" OR "tablet detection" OR "pill classification" OR "medication classification" OR "drug identification" OR "pharmaceutical identification" OR "pill recognition" OR "medication recognition" OR "drug recognition" OR "tablet recognition" OR "pill image" OR "medication image" OR "drug image" OR "pharmaceutical image" OR "pill counting" OR "medication counting" OR "drug counting" OR "pharmaceutical counting"))
+AND
+(("swallowing detection" OR "ingestion detection" OR "pill intake" OR "medication intake" OR "drug intake" OR "medication adherence" OR "drug adherence" OR "pill adherence" OR "medication compliance" OR "drug compliance" OR "treatment adherence" OR "treatment compliance" OR "swallowing verification" OR "ingestion verification" OR "medication consumption" OR "drug consumption" OR "pill consumption" OR "medication taking" OR "drug taking" OR "pill taking" OR "medication swallowing" OR "drug swallowing"))
+AND
+(("computer vision" OR "deep learning" OR "convolutional neural network" OR "CNN" OR "machine learning" OR "artificial intelligence" OR "neural network" OR "image classification" OR "object detection" OR "image recognition" OR "video analysis" OR "action recognition" OR "activity recognition" OR "pattern recognition" OR "image processing" OR "video processing" OR "feature extraction" OR "transfer learning" OR "YOLO" OR "ResNet" OR "EfficientNet"))
+AND
+(("tuberculosis" OR "DOTS" OR "directly observed therapy" OR "medication adherence" OR "treatment monitoring" OR "chronic disease" OR "telemedicine" OR "mobile health" OR "mHealth" OR "telehealth" OR "remote monitoring" OR "digital health" OR "eHealth" OR "healthcare technology" OR "medical imaging" OR "smartphone" OR "mobile application" OR "wearable" OR "health informatics" OR "biomedical engineering"))
 ```
 
 The search returned **27 records** across 4 databases.
