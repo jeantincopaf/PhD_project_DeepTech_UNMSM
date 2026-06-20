@@ -1,9 +1,9 @@
 # AI-DOTS: Computer Vision-Driven Pill Ingestion Verification for the Treatment of Tuberculosis
 
-**Author:** Jean Pierre Tincopa Flores
-**University:** Univrsidad Nacional Mayor de San Marcos
-**Program:** PhD in Deep Tech focused on Artifitial Intelligence and Emerging Technologies
-**Course:** Research Methods and Scientific Integrity in AI and Advanced Technologies 
+**Author:** Jean Pierre Tincopa Flores      
+**University:** Univrsidad Nacional Mayor de San Marcos     
+**Program:** PhD in Deep Tech focused on Artifitial Intelligence and Emerging Technologies      
+**Course:** Research Methods and Scientific Integrity in AI and Advanced Technologies       
 
 ---
 
