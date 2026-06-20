@@ -1,43 +1,69 @@
-# UNMSM Research Methods - Deivhy Torres
+# AI-DOTS: Computer Vision-Driven Pill Ingestion Verification for the Treatment of Tuberculosis
 
-Doctoral course repository for *Research Methods and Scientific Integrity in AI and Advanced Technologies* at UNMSM.
+**Author:** Jean Pierre Tincopa Flores  
+**Course:** Research Methods and Scientific Integrity in AI and Advanced Technologies — UNMSM
 
-**Author:** Deivhy Torres  
-**Current research topic:** Child anemia in Peru, with emphasis on children aged 6 to 35 months and national inequalities during 2019-2024.
+---
 
-## What this repository covers
+## What this is
 
-This repository currently documents the first five sessions of the course. It is organized as a partial but coherent project: the paradigm is defined first, the method is justified second, the first protocol outline follows from those choices, the literature review frames the gap, and the technical artifact shows how a reproducible analysis pipeline can be built.
+This repository documents the doctoral research project for the development of a computer vision system capable of classifying tuberculosis pill brands and detecting real-time pill ingestion. The goal is to provide a technological alternative to in-person DOTS (Directly Observed Treatment, Short-course) supervision, reducing the burden on healthcare centers and improving patient adherence to treatment — particularly in remote and marginalized areas of Peru.
 
-At this stage, the repository should be read as a **sessions 1-5 submission**, not as the final full-course repository. Later units such as ethics, data management, bias auditing, peer review, and the final protocol versions are still pending.
+---
 
-## Current structure
+## Repository Structure
 
-- `01_paradigm/` - paradigm justification for the child anemia topic
-- `02_method/` - research question refinement and method-fit matrix
-- `03_protocol/` - protocol outline v0.1
-- `04_literature/` - mini systematic review, PRISMA diagram, and gap analysis
-- `05_pipeline/` - reproducible baseline pipeline using Git, DVC, MLflow, and Docker
+| Folder | Content |
+|--------|---------|
+| `01_paradigm/` | Paradigm Justification Statement (Session 1) |
+| `02_method/` | Method-Fit Matrix (Session 2) |
+| `03_protocol/` | Research Protocol versions v0.1 → v2.0 (Sessions 3, 13, 15) |
+| `04_literature/` | Systematic Literature Review + PRISMA diagram + Gap Analysis (Session 4) |
+| `05_pipeline/` | Reproducible ML pipeline: ... (Session 5) |
 
-## How to read the project
+---
 
-If you want the research logic, start with `01_paradigm/` and move in order to `04_literature/`. Each folder represents one step in the course sequence.
+## Research Context
 
-If you want the technical artifact, go directly to `05_pipeline/README.md`. The reproducibility stack is intentionally self-contained there, even though the final course brief also shows a wider repository layout for later sessions.
+Tuberculosis is a public health priority in Peru and worldwide. According to the WHO Global Tuberculosis Report 2025, an estimated 10.7 million people were infected globally in 2024, and Peru registered 33,049 cases that same year (MINSA). The current DOTS strategy requires in-person supervision by healthcare workers, which is very costly and logistically unfeasible in remote areas.
 
-## Technical status
+This research proposes a computer vision system that:
+1. **Classifies** the type/brand of tuberculosis pills
+2. **Detects** pill intake in real time via video analysis
 
-The pipeline is centered on a small synthetic ENDES-like dataset created only for reproducibility practice. It does **not** claim to be the final analytical dataset for the research project. The current artifact demonstrates versioning, experiment tracking, and environment documentation, while the substantive doctoral work remains focused on the protocol and literature components.
+---
 
-Docker instructions are included because they are required by the course brief. However, Docker was **not** validated locally in the present environment because Docker is not installed on this machine. That limitation is documented rather than hidden.
+## Research Paradigm
 
-## What is still pending for the final course brief
+**Quantitative empirical (positivist)** — The central question is answered by the algorithm's performance metrics (accuracy, precision, recall, F1-score), not by subjective interpretations.
 
-- later-session folders and deliverables beyond Session 5
-- a final DVC remote setup tested from a fresh external clone
-- later protocol versions (`v1.0` and `v2.0`)
-- ethics, data management, bias, integrity, and reflective writing materials
+---
 
-## Integrity note
+## Method
 
-The methodological documents in `01` to `04` are working academic drafts. They should be treated as materials to be personally reviewed, refined, and defended by the author before final course submission.
+Controlled dataset generation + deep learning pipeline with:
+- CNN-based architectures for pill classification (ResNet, EfficientNet, YOLO)
+- Temporal action recognition for ingestion detection
+- Robustness testing under varying lighting, occlusion, and camera angles
+- Quasi-experimental evaluation with cross-validation
+
+---
+
+## Current Status
+
+- [x] `01_paradigm/` — Paradigm justification completed
+- [x] `02_method/` — Method-fit matrix completed
+- [x] `03_protocol/` — Protocol v0.1 completed
+- [x] `04_literature/` — Systematic review in progress
+- [ ] `05_pipeline/` — Reproducible ML pipeline (pending)
+
+---
+
+## References
+
+1. WHO, "Global Tuberculosis Report 2025," 2025. Available: https://www.who.int/teams/global-programme-on-tuberculosis-and-lung-health/tb-reports/global-tuberculosis-report-2025
+2. MINSA, "La tuberculosis es curable: detección temprana y tratamiento completo son la clave," 2024. Available: https://www.gob.pe/institucion/minsa/noticias/1189372-la-tuberculosis-es-curable-deteccion-temprana-y-tratamiento-completo-son-la-clave
+
+---
+
+**Last updated:** June 2026
