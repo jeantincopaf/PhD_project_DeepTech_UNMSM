@@ -1,0 +1,10 @@
+# Gap Analysis Table
+
+| Gap Type | Gap Identified | Evidence (Citation) |
+|---|---|---|
+| **Knowledge gap** | There is relevant literature on pill detection and medication adherence using computer vision, but there is still no system specifically designed for tuberculosis pill classification and real-time ingestion verification within Peru's DOTS program context. | Lee & Youm (2021); Yang et al. (2021); Abiruth et al. (2026) |
+| **Methodological gap** | Most studies address either pill detection or ingestion detection, but not both in a unified pipeline. The integration of classification and temporal action recognition remains underexplored. | Nguyen et al. (2024); Pu et al. (2025); Yadav et al. (2026) |
+| **Application gap** | The literature focuses on elderly care, chronic disease, and dementia populations in high-resource settings. There is minimal work on tuberculosis-specific medication verification, particularly for remote or resource-limited contexts where DOTS supervision is most needed. | Pu et al. (2025); Abiruth et al. (2026); Yadav et al. (2026) |
+| **Robustness gap** | Most studies validate under controlled laboratory conditions. There is limited evidence on how integrated pill detection and ingestion verification systems perform under realistic variations in lighting, occlusion, camera angles, and user behavior typical of home-based treatment. | Lee & Youm (2021); Yang et al. (2021) |
+| **Clinical validation gap** | Existing technical studies demonstrate algorithmic accuracy but rarely progress to clinical validation with actual patients. Ethical restrictions prevent testing with active tuberculosis patients, creating a barrier between technical feasibility and clinical deployment. | Yadav et al. (2026); Abiruth et al. (2026) |
+| **Contribution of the present study** | The proposed project can bridge the integration gap by developing a unified computer vision pipeline for Peru's DOTS program, combining pill classification with real-time ingestion detection, validated under controlled robustness conditions with a pilot pathway using healthy volunteers. | Lee & Youm (2021); Yadav et al. (2026); WHO 2025; MINSA 2024 |
