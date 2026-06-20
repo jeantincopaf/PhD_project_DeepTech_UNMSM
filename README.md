@@ -17,11 +17,11 @@ This repository documents the doctoral research project for the development of a
 
 | Folder | Content |
 |--------|---------|
-| `01_paradigm/` | Paradigm Justification Statement (Session 1) |
-| `02_method/` | Method-Fit Matrix (Session 2) |
-| `03_protocol/` | Research Protocol versions v0.1 → v2.0 (Sessions 3, 13, 15) |
-| `04_literature/` | Systematic Literature Review + PRISMA diagram + Gap Analysis (Session 4) |
-| `05_pipeline/` | Reproducible ML pipeline: ... (Session 5) |
+| `01_paradigm/` | Paradigm Justification Statement |
+| `02_method/` | Method-Fit Matrix |
+| `03_protocol/` | Research Protocol version |
+| `04_literature/` | Systematic Literature Review + PRISMA diagram + Gap Analysis |
+| `05_pipeline/` | Reproducible ML pipeline |
 
 ---
 
