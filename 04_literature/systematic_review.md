@@ -1,4 +1,4 @@
-# Mini Systematic Review: AI-DOTS — Computer Vision for Pill Detection and Ingestion Verification
+# Systematic Literature Review: AI-DOTS — Computer Vision for Pill Detection and Ingestion Verification
 
 
 ## 4.1. Review Question
