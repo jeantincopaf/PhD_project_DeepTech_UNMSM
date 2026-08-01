@@ -1,6 +1,0 @@
-{
-  "python": "3.12.13",
-  "torch": "2.11.0+cu128",
-  "ultralytics": "8.4.102",
-  "gpu": "NVIDIA L4"
-}

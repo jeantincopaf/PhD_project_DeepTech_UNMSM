@@ -1,51 +1,48 @@
 # Research Question and Method-Fit Matrix
 
-## 2.1. Refined research question
+## 2.1. Refined Research Question
 
-> To what extent can a pretrained YOLO26n object detector locate and distinguish three pharmaceutical pill types in the held-out MEDISEG test set?
+To what extent can a computer vision system accurately classify tuberculosis pill brands and detect real-time pill ingestion, and which neural network architectures and robustness conditions are most strongly associated with reliable medication verification performance?
 
-## 2.2. Candidate methods
+## 2.2. Three Candidate Methods
 
-| Method | Description |
+| Method | Short Description |
 |---|---|
-| **Method 1 - Transfer learning for object detection** | Fine-tune a pretrained compact YOLO detector on the labeled MEDISEG `3pills` subset and evaluate it on a held-out test partition. |
-| **Method 2 - Classical computer vision** | Engineer color, contour, texture, and shape features, followed by rule-based localization and classification. |
-| **Method 3 - Unadapted pretrained inference** | Apply a generic pretrained detector without supervised fine-tuning on the three MEDISEG classes. |
+| **Method 1 - Controlled dataset + deep learning pipeline** | Generate labeled datasets of pill images and ingestion video frames, then train and compare CNN-based architectures (ResNet, EfficientNet, YOLO) for classification and action detection, with robustness testing under varying lighting, occlusion, and camera angles. |
+| **Method 2 - Transfer learning with existing medical image datasets** | Use publicly available pill image datasets and pre-trained video action recognition models, fine-tuning them for tuberculosis pill classification and ingestion detection without collecting original data. |
+| **Method 3 - Rule-based computer vision (traditional CV)** | Implement classical image processing techniques (color thresholding, edge detection, template matching, optical flow) to identify pills and detect swallowing motions without deep learning, relying on handcrafted features and heuristic rules. |
 
-## 2.3. E.D.F.C.V. matrix
+## 2.3. E.D.F.C.V. Matrix
 
-Scores range from 1 (weak fit) to 5 (strong fit).
+| Criterion | What it asks | Method 1 | Method 2 | Method 3 |
+|---|---|---:|---:|---:|
+| **E - Epistemological fit** | Does the method match the quantitative/positivist paradigm? | 5 | 5 | 5 |
+| **D - Data availability** | Can the required data be accessed realistically? | 4 | 5 | 4 |
+| **F - Feasibility** | Can it be done well within the present course stage? | 5 | 3 | 4 |
+| **C - Contribution type** | Does it answer the actual question being asked? | 5 | 3 | 2 |
+| **V - Venue fit** | Does it fit likely computer vision and health informatics venues? | 5 | 4 | 2 |
+| **Total** |  | **24** | **20** | **17** |
 
-| Criterion | Method 1 | Method 2 | Method 3 |
-|---|---:|---:|---:|
-| **E - Epistemological fit** | 5 | 5 | 4 |
-| **D - Data availability** | 5 | 5 | 5 |
-| **F - Feasibility for the course deadline** | 5 | 3 | 5 |
-| **C - Contribution to the research question** | 5 | 3 | 2 |
-| **V - Venue and disciplinary fit** | 5 | 3 | 2 |
-| **Total** | **25** | **19** | **18** |
+The matrix supports the choice, but it does not replace judgment. The point is to defend the method, not just to score it.
 
-The scores organize the justification but do not substitute for methodological reasoning.
+## 2.4. Why Method 1 Wins
 
-## 2.4. Selected method
+Method 1 is the best fit because the question explicitly asks about a computer vision system designed for tuberculosis pill classification and real-time ingestion detection. Generating controlled datasets with the specific pill brands used in Peru's DOTS program and testing under realistic conditions (lighting variation, occlusion, camera angles) is essential for demonstrating technical feasibility and clinical relevance.
 
-Method 1 was selected because it directly addresses both components of the question: locating pill instances and distinguishing among the three labeled types. Transfer learning also makes the experiment feasible within the course deadline while retaining a rigorous train-validation-test design.
+This method also respects the sequence of the project. Before asking whether an off-the-shelf transfer learning solution works, I first need to establish whether a purpose-built pipeline can achieve acceptable accuracy on locally relevant medication and under realistic usage conditions. That is the kind of work controlled dataset generation and iterative architecture comparison do well.
 
-YOLO26n was chosen as a compact baseline rather than as proof that it is universally superior. The experiment evaluates one predefined architecture and one seed; it is not an architecture-comparison study.
+## 2.5. Why Method 2 Does Not Win
 
-## 2.5. Why the alternatives were not selected
+Transfer learning with existing datasets would offer faster development and lower data collection burden, but publicly available pill datasets rarely include the specific brands and formulations used in Peru's national tuberculosis program. Moreover, pre-trained action recognition models are typically trained on general human actions (sports, cooking) rather than the specific motion pattern of medication ingestion. Without controlled data collection and fine-tuning on the target domain, the system risks poor generalization to the actual clinical context.
 
-Classical computer vision would require handcrafted thresholds that are sensitive to illumination, reflections, background, orientation, and within-class visual variation. It remains a possible baseline for future comparison, but it is less suitable as the main method for this short study.
+In other words, transfer learning could become a valuable component within Method 1, but relying on it as the primary strategy would compromise the study's ability to answer whether the system works for the specific tuberculosis treatment scenario in Peru.
 
-Unadapted pretrained inference is faster but cannot directly predict the MEDISEG class identifiers because those labels are absent from generic pretraining taxonomies. It therefore has poor construct fit with the stated outcome.
+## 2.6. Why Method 3 Does Not Win
 
-## 2.6. Executed design
+Rule-based computer vision is appealing because it avoids the complexity of deep learning training and requires less computational resources. The problem is that handcrafted features struggle with the variability inherent in real-world medication intake: different pill colors and shapes, varying skin tones, diverse backgrounds, changing lighting conditions, and unpredictable head/camera movements. The ingestion detection task in particular requires understanding temporal sequences, which traditional optical flow and template matching handle poorly compared to deep learning approaches.
 
-- Public MEDISEG v2 `3pills` subset.
-- 2,333 images split deterministically into training (1,633), validation (350), and test (350).
-- Pretrained YOLO26n fine-tuned using seed 42, image size 640, batch size 16, maximum 40 epochs, and early-stopping patience 8.
-- Final reporting on the isolated test set using precision, recall, mAP@0.50, and mAP@0.50:0.95.
+If I forced a rule-based design, the project would likely fail to achieve the accuracy and robustness thresholds required for any practical medication adherence application, making the technical validation meaningless.
 
-## 2.7. Open methodological tension
+## 2.7. Open Tension
 
-The image-level split contains no exact duplicate files across partitions, but MEDISEG does not provide acquisition-session identifiers. Near-duplicate or correlated captures cannot therefore be ruled out completely. In addition, one training seed does not quantify run-to-run variability. These limitations constrain generalization beyond the reported benchmark.
+The chosen method is strong for technical validation and architecture comparison, but weaker for immediate clinical deployment. The controlled dataset and lab testing provide rigorous evidence of algorithmic performance, yet they do not demonstrate whether the system improves actual treatment adherence in tuberculosis patients. If the project later evolves into a clinical implementation study, it may need to shift toward a mixed-methods design integrating technical metrics with patient adherence data. For now, though, the defensible choice is to build a reliable technical baseline first.

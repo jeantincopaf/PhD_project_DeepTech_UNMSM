@@ -1,8 +1,0 @@
-path: /content/mediseg_pill_detection/mediseg_3pills_yolo
-train: images/train
-val: images/val
-test: images/test
-names:
-  0: HK-65191
-  1: HK-44618
-  2: HK-62094
