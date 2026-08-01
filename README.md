@@ -57,7 +57,7 @@ Controlled dataset generation + deep learning pipeline with:
 - [x] `02_method/` — Method-fit matrix completed
 - [x] `03_protocol/` — Protocol v0.1 completed
 - [x] `04_literature/` — Systematic review in progress
-- [ ] `05_pipeline/` — Reproducible ML pipeline (pending)
+- [x] `05_pipeline/` — First reproducible proof of concept completed: MEDISEG pill detection with YOLO26n
 
 ---
 
