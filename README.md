@@ -1,71 +1,67 @@
-# AI-DOTS: Computer Vision-Driven Pill Ingestion Verification for the Treatment of Tuberculosis
+# Reproducible Detection of Three Pharmaceutical Pill Types with YOLO26n
 
-**Author:** Jean Pierre Tincopa Flores      
-**University:** Universidad Nacional Mayor de San Marcos (UNMSM)     
-**Program:** PhD in Deep Tech focused on Artifitial Intelligence and Emerging Technologies      
-**Course:** Research Methods and Scientific Integrity in AI and Advanced Technologies       
+**Author:** Jean Pierre Tincopa Flores<br>
+**University:** Universidad Nacional Mayor de San Marcos (UNMSM)<br>
+**Program:** PhD in Deep Tech focused on Artificial Intelligence and Emerging Technologies<br>
+**Course:** Research Methods and Scientific Integrity in AI and Advanced Technologies
 
----
+## Study scope
 
-## What this is
+This repository reports a controlled technical baseline for detecting three pharmaceutical pill types in MEDISEG images. It is a deliberately reduced and executable course study within the broader AI-DOTS research direction.
 
-This repository documents the doctoral research project for the development of a computer vision system capable of classifying tuberculosis pill brands and detecting real-time pill ingestion. The goal is to provide a technological alternative to in-person DOTS (Directly Observed Treatment, Short-course) supervision, reducing the burden on healthcare centers and improving patient adherence to treatment — particularly in remote and marginalized areas of Peru.
+The present experiment addresses only **pill localization and class identification in static images**. It does not evaluate swallowing, medication adherence, tuberculosis patients, clinical effectiveness, or deployment in health services.
 
----
+## Research question
 
-## Repository Structure
+> To what extent can a pretrained YOLO26n object detector locate and distinguish three pharmaceutical pill types in the held-out MEDISEG test set?
+
+## Data and experimental design
+
+- Dataset: MEDISEG v2, `3pills` subset ([DOI: 10.25383/city.28574786.v2](https://doi.org/10.25383/city.28574786.v2))
+- Classes: `HK-65191`, `HK-44618`, and `HK-62094`
+- Images: 2,333
+- Deterministic split, seed 42: 1,633 training, 350 validation, and 350 test images
+- Model: pretrained YOLO26n, fine-tuned at 640 x 640 pixels
+- Maximum training: 40 epochs, patience 8, batch size 16
+- Execution environment: Google Colab Pro with NVIDIA L4 GPU
+
+The test partition remained isolated until final model evaluation. The complete assignment of files is recorded in `05_pipeline/results/split_manifest.csv`.
+
+## Main results
+
+| Test metric | Value |
+|---|---:|
+| Precision | 0.9288 |
+| Recall | 0.8980 |
+| mAP@0.50 | 0.9740 |
+| mAP@0.50:0.95 | 0.9174 |
+
+Training stopped after epoch 12 through early stopping. The best validation mAP@0.50:0.95 occurred at epoch 4 (0.9232). The held-out test result was 0.9174, a difference of approximately 0.0058.
+
+Detailed metrics, figures, model weights, environment information, and limitations are documented in [`05_pipeline/RESULTS.md`](05_pipeline/RESULTS.md).
+
+## Repository structure
 
 | Folder | Content |
-|--------|---------|
-| `01_paradigm/` | Paradigm Justification Statement |
-| `02_method/` | Method-Fit Matrix |
-| `03_protocol/` | Research Protocol version |
-| `04_literature/` | Systematic Literature Review + PRISMA diagram + Gap Analysis |
-| `05_pipeline/` | Reproducible ML pipeline |
+|---|---|
+| `01_paradigm/` | Quantitative empirical paradigm justification |
+| `02_method/` | Method-fit matrix for the executed technical study |
+| `03_protocol/` | Original protocol and current executable protocol v0.2 |
+| `04_literature/` | Broader AI-DOTS literature review and PRISMA materials |
+| `05_pipeline/` | Colab notebook, results, figures, manifest, and best checkpoint |
 
----
+## Reproduction
 
-## Research Context
+1. Open `05_pipeline/MEDISEG_3Pills_YOLO26_Colab.ipynb` in Google Colab.
+2. Select a GPU runtime; the reported run used an NVIDIA L4.
+3. Run the notebook from top to bottom.
+4. Confirm the dataset checksum and audit gates.
+5. Compare the generated `test_metrics.json` and split manifest with the archived artifacts.
 
-Tuberculosis is a public health priority in Peru and worldwide. According to the WHO Global Tuberculosis Report 2025, an estimated 10.7 million people were infected globally in 2024, and Peru registered 33,049 cases that same year (MINSA). The current DOTS strategy requires in-person supervision by healthcare workers, which is very costly and logistically unfeasible in remote areas.
+The original MEDISEG images are not redistributed in this repository. The notebook downloads the official archive and verifies its checksum before use.
 
-This research proposes a computer vision system that:
-1. **Classifies** the type/brand of tuberculosis pills
-2. **Detects** pill intake in real time via video analysis
+## Interpretation boundary
 
----
+The results support technical feasibility within a three-class curated image dataset. They do not establish clinical validity, medication ingestion, adherence improvement, or performance for tuberculosis medicines used in Peru. These are later phases of the broader doctoral project and require new data, ethics review, and external validation.
 
-## Research Paradigm
-
-**Quantitative empirical (positivist)** — The central question is answered by the algorithm's performance metrics (accuracy, precision, recall, F1-score), not by subjective interpretations.
-
----
-
-## Method
-
-Controlled dataset generation + deep learning pipeline with:
-- CNN-based architectures for pill classification (ResNet, EfficientNet, YOLO)
-- Temporal action recognition for ingestion detection
-- Robustness testing under varying lighting, occlusion, and camera angles
-- Quasi-experimental evaluation with cross-validation
-
----
-
-## Current Status
-
-- [x] `01_paradigm/` — Paradigm justification completed
-- [x] `02_method/` — Method-fit matrix completed
-- [x] `03_protocol/` — Protocol v0.1 completed
-- [x] `04_literature/` — Systematic review in progress
-- [ ] `05_pipeline/` — Reproducible ML pipeline (pending)
-
----
-
-## References
-
-1. WHO, "Global Tuberculosis Report 2025," 2025. Available: https://www.who.int/teams/global-programme-on-tuberculosis-and-lung-health/tb-reports/global-tuberculosis-report-2025
-2. MINSA, "La tuberculosis es curable: detección temprana y tratamiento completo son la clave," 2024. Available: https://www.gob.pe/institucion/minsa/noticias/1189372-la-tuberculosis-es-curable-deteccion-temprana-y-tratamiento-completo-son-la-clave
-
----
-
-**Last updated:** 20 June 2026
+**Last updated:** 1 August 2026

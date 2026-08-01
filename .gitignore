@@ -21,3 +21,11 @@ Thumbs.db
 
 # DVC local cache
 .dvc/cache/
+
+# Downloaded datasets and generated raw runs
+datasets/
+MEDISEG*/
+runs/
+
+# Keep only the selected checkpoint archived in results/weights
+**/last.pt
