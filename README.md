@@ -22,6 +22,7 @@ This repository documents the doctoral research project for the development of a
 | `03_protocol/` | Research Protocol version |
 | `04_literature/` | Systematic Literature Review + PRISMA diagram + Gap Analysis |
 | `05_pipeline/` | Reproducible ML pipeline |
+| `06_repro_audit/` | Reproducibility audit of the published Zero-PIMA study |
 
 ---
 
@@ -58,6 +59,7 @@ Controlled dataset generation + deep learning pipeline with:
 - [x] `03_protocol/` — Protocol v0.1 completed
 - [x] `04_literature/` — Systematic review in progress
 - [x] `05_pipeline/` — First reproducible proof of concept completed: MEDISEG pill detection with YOLO26n
+- [x] `06_repro_audit/` - Zero-PIMA reproducibility audit completed
 
 ---
 
