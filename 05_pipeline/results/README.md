@@ -19,6 +19,36 @@
 
 Training was configured for a maximum of 40 epochs and stopped after epoch 12 through early stopping. The best validation mAP@0.50:0.95 occurred at epoch 4 (`0.9232`); the held-out test value was `0.9174`.
 
+## Result figures
+
+### Training and validation behavior
+
+![Training and validation curves for the YOLO26n MEDISEG experiment](figures/training_results.png)
+
+The curves summarize the optimization losses and validation metrics across the 12 completed epochs. Early stopping retained the checkpoint associated with the best validation performance rather than the final epoch.
+
+### Precision-Recall performance
+
+![Precision-Recall curve on the held-out MEDISEG test set](figures/BoxPR_curve.png)
+
+The three class-specific curves remain near the upper-right region. Their average corresponds to an overall test mAP@0.50 of `0.9740`.
+
+### Normalized confusion matrix
+
+![Normalized confusion matrix on the held-out MEDISEG test set](figures/confusion_matrix_normalized.png)
+
+The diagonal values show strong class-level agreement. Predictions assigned to background and missed detections remain important when selecting the operating confidence threshold.
+
+### Representative test predictions
+
+The following examples were selected deterministically from the held-out test partition using seed 42.
+
+| HK-65191 | HK-44618 | HK-62094 |
+|---|---|---|
+| ![Representative HK-65191 detections](predictions/image0.jpg) | ![Representative HK-44618 detections](predictions/image1.jpg) | ![Representative HK-62094 detection](predictions/image3.jpg) |
+
+These images demonstrate detections under the controlled visual conditions represented in MEDISEG. They are illustrative examples and are not a substitute for the complete quantitative evaluation.
+
 ## Artifact inventory
 
 - `test_metrics.json`: final test metrics and per-class values.
