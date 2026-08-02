@@ -27,6 +27,7 @@ This repository documents the doctoral research project for the development of a
 | `09_ethics/` | AI-DOTS ethics protocol and executed COMPAS fairness lab |
 | `10_data_mgmt/` | FAIR Data Management Plan and executed anonymization lab |
 | `11_bias_audit/` | COMPAS race bias audit with before/after AIF360 metrics |
+| `12_integrity/` | Retracted YOLOv5 paper analysis and personal AI use policy |
 
 ---
 
@@ -68,6 +69,7 @@ Controlled dataset generation + deep learning pipeline with:
 - [x] `09_ethics/` - Ethics protocol drafted; COMPAS fairness lab executed
 - [x] `10_data_mgmt/` - FAIR Data Management Plan and anonymization lab completed
 - [x] `11_bias_audit/` - COMPAS bias audit and Reweighing mitigation completed
+- [x] `12_integrity/` - Retracted medical-imaging paper analysis and personal AI use policy completed
 
 ---
 
