@@ -24,6 +24,7 @@ This repository documents the doctoral research project for the development of a
 | `05_pipeline/` | Reproducible ML pipeline |
 | `06_repro_audit/` | Reproducibility audit of the published Zero-PIMA study |
 | `07_model_card/` | Model Card, Dataset Datasheet, and educational EU AI Act Annex IV crosswalk |
+| `09_ethics/` | AI-DOTS ethics protocol and executed COMPAS fairness lab |
 
 ---
 
@@ -62,6 +63,7 @@ Controlled dataset generation + deep learning pipeline with:
 - [x] `05_pipeline/` — First reproducible proof of concept completed: MEDISEG pill detection with YOLO26n
 - [x] `06_repro_audit/` - Zero-PIMA reproducibility audit completed
 - [x] `07_model_card/` - Model Card, Datasheet, and Annex IV gap analysis completed
+- [x] `09_ethics/` - Ethics protocol drafted; COMPAS fairness lab executed
 
 ---
 
