@@ -26,6 +26,7 @@ This repository documents the doctoral research project for the development of a
 | `07_model_card/` | Model Card, Dataset Datasheet, and educational EU AI Act Annex IV crosswalk |
 | `09_ethics/` | AI-DOTS ethics protocol and executed COMPAS fairness lab |
 | `10_data_mgmt/` | FAIR Data Management Plan and executed anonymization lab |
+| `11_bias_audit/` | COMPAS race bias audit with before/after AIF360 metrics |
 
 ---
 
@@ -66,6 +67,7 @@ Controlled dataset generation + deep learning pipeline with:
 - [x] `07_model_card/` - Model Card, Datasheet, and Annex IV gap analysis completed
 - [x] `09_ethics/` - Ethics protocol drafted; COMPAS fairness lab executed
 - [x] `10_data_mgmt/` - FAIR Data Management Plan and anonymization lab completed
+- [x] `11_bias_audit/` - COMPAS bias audit and Reweighing mitigation completed
 
 ---
 
