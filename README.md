@@ -19,7 +19,7 @@ This repository documents the doctoral research project for the development of a
 |--------|---------|
 | `01_paradigm/` | Paradigm Justification Statement |
 | `02_method/` | Method-Fit Matrix |
-| `03_protocol/` | Research Protocol version |
+| `03_protocol/` | Research Protocol versions v0.1 and v1.0 |
 | `04_literature/` | Systematic Literature Review + PRISMA diagram + Gap Analysis |
 | `05_pipeline/` | Reproducible ML pipeline |
 | `06_repro_audit/` | Reproducibility audit of the published Zero-PIMA study |
@@ -61,7 +61,7 @@ Controlled dataset generation + deep learning pipeline with:
 
 - [x] `01_paradigm/` — Paradigm justification completed
 - [x] `02_method/` — Method-fit matrix completed
-- [x] `03_protocol/` — Protocol v0.1 completed
+- [x] `03_protocol/` — Protocol v1.0 complete; v2.0 remains pending peer-review integration
 - [x] `04_literature/` — Systematic review in progress
 - [x] `05_pipeline/` — First reproducible proof of concept completed: MEDISEG pill detection with YOLO26n
 - [x] `06_repro_audit/` - Zero-PIMA reproducibility audit completed
