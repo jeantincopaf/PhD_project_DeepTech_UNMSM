@@ -1,0 +1,9 @@
+{
+  "primary_selection_metric": "validation mAP50_95",
+  "tie_margin": 0.01,
+  "tie_breaker": "lower parameter count",
+  "selected_model": "yolo26n",
+  "selected_validation_mAP50_95": 0.9540648686798884,
+  "selected_parameters": 2572280,
+  "test_used_for_selection": false
+}

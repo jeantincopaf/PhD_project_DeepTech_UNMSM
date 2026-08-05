@@ -21,7 +21,7 @@ This repository documents the doctoral research project for the development of a
 | `02_method/` | Method-Fit Matrix |
 | `03_protocol/` | Research Protocol versions v0.1 and v1.0 |
 | `04_literature/` | Systematic Literature Review + PRISMA diagram + Gap Analysis |
-| `05_pipeline/` | Reproducible ML pipeline |
+| `05_pipeline/` | Reproducible ML pipeline, exploratory baseline, and confirmatory robustness results |
 | `06_repro_audit/` | Reproducibility audit of the published Zero-PIMA study |
 | `07_model_card/` | Model Card, Dataset Datasheet, and educational EU AI Act Annex IV crosswalk |
 | `09_ethics/` | AI-DOTS ethics protocol and executed COMPAS fairness lab |
@@ -63,7 +63,7 @@ Controlled dataset generation + deep learning pipeline with:
 - [x] `02_method/` — Method-fit matrix completed
 - [x] `03_protocol/` — Protocol v1.0 complete; v2.0 remains pending peer-review integration
 - [x] `04_literature/` — Systematic review in progress
-- [x] `05_pipeline/` — First reproducible proof of concept completed: MEDISEG pill detection with YOLO26n
+- [x] `05_pipeline/` — MEDISEG proof of concept completed and strengthened with three-detector screening, 40-epoch training, and five-seed YOLO26n evaluation
 - [x] `06_repro_audit/` - Zero-PIMA reproducibility audit completed
 - [x] `07_model_card/` - Model Card, Datasheet, and Annex IV gap analysis completed
 - [x] `09_ethics/` - Ethics protocol drafted; COMPAS fairness lab executed
@@ -80,4 +80,4 @@ Controlled dataset generation + deep learning pipeline with:
 
 ---
 
-**Last updated:** 1 August 2026
+**Last updated:** 4 August 2026

@@ -1,0 +1,55 @@
+{
+  "experiment_type": "confirmatory robustness extension",
+  "dataset": "MEDISEG v2 - 3pills",
+  "dataset_doi": "10.25383/city.28574786.v2",
+  "dataset_md5": "64d851d97d85de706e941539d48bbd72",
+  "split_seed": 42,
+  "split_images": {
+    "train": 1633,
+    "val": 350,
+    "test": 350
+  },
+  "candidates": [
+    {
+      "key": "yolo26n",
+      "family": "YOLO",
+      "weights": "yolo26n.pt"
+    },
+    {
+      "key": "yolo11n",
+      "family": "YOLO",
+      "weights": "yolo11n.pt"
+    },
+    {
+      "key": "rtdetr_l",
+      "family": "RTDETR",
+      "weights": "rtdetr-l.pt"
+    }
+  ],
+  "screening_seed": 42,
+  "training_seeds": [
+    7,
+    21,
+    42,
+    84,
+    123
+  ],
+  "epochs": 40,
+  "early_stopping_effectively_disabled": true,
+  "patience": 1000,
+  "image_size": 640,
+  "batch": 8,
+  "workers": 0,
+  "optimizer": "AdamW",
+  "lr0": 0.001,
+  "weight_decay": 0.0005,
+  "model_selection": {
+    "primary_selection_metric": "validation mAP50_95",
+    "tie_margin": 0.01,
+    "tie_breaker": "lower parameter count",
+    "selected_model": "yolo26n",
+    "selected_validation_mAP50_95": 0.9540648686798884,
+    "selected_parameters": 2572280,
+    "test_used_for_selection": false
+  }
+}

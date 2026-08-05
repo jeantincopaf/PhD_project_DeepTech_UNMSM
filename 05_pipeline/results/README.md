@@ -1,5 +1,7 @@
 # Archived Results of the First Proof of Concept
 
+This directory preserves the original exploratory YOLO26n baseline exactly as executed. A later confirmatory extension addressed its one-model, one-seed, and early-stopping limitations without replacing or rewriting the historical result. See [`confirmatory/`](confirmatory/README.md).
+
 ## Held-out test results
 
 | Metric | Value |
@@ -74,3 +76,7 @@ These images demonstrate detections under the controlled visual conditions repre
 ## Correct interpretation
 
 These results show that YOLO26n achieved high internal performance for detecting three pill classes in the MEDISEG test partition. They should be treated as a first technical proof of concept within the original AI-DOTS project, not as validation of swallowing, adherence, tuberculosis medication recognition, or clinical readiness.
+
+## Subsequent confirmatory extension
+
+After feedback on experimental stability, three detectors were screened for 40 complete epochs using validation only. YOLO26n was then evaluated with five predeclared seeds. The confirmatory held-out test mAP@0.50:0.95 was `0.9515 ± 0.0054` (mean ± SD). These newer results are additive; they do not invalidate or overwrite the exploratory baseline above.
